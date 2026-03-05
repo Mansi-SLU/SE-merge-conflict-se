@@ -25,15 +25,15 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero!")
     return a / b
 
-def power(a, b):
-    """Raise a to the power of b."""
-    return a ** b
-
-
 
 def main():
     """Main function to run the calculator."""
     print("Welcome to the Simple Calculator!")
+    print("Operations: +, -, *, /, %")
+    
+    try:
+        num1 = float(input("Enter first number: "))
+        operator = input("Enter operator (+, -, *, /, %): ")
     print("Operations: +, -, *, /, ^")
     
     try:
@@ -49,6 +49,8 @@ def main():
             result = multiply(num1, num2)
         elif operator == "/":
             result = divide(num1, num2)
+        elif operator == "%":
+            result = modulo(num1, num2)
         elif operator == "^":
             result = power(num1, num2)
         else:
